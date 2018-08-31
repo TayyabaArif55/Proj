@@ -49,7 +49,8 @@ namespace FAISALMOVERS
 
             using (Controller controller = new ErrorController())
             {
-                ((IController)controller).Execute(new RequestContext(new HttpContextWrapper(httpContext), routeData));
+               @IController controller1 = ((IController)controller);
+                controller1.Execute(new RequestContext(new HttpContextWrapper(httpContext), routeData));
             }
         }
     }
